@@ -24,5 +24,13 @@
       <li>rake db:migrate db:seed</li>
       <li>rails g active_admin:resource <i>model</i> to admin the model from the active admin panel</li>
     </ol>
+    <h2>Heroku deployment</h2>
+    <ol>
+      <li>remember: heroku does not run sqlite</li>
+      <li>heroku create <i>app_name</i></li>
+      <li>git push heroku master</li>
+      <li>heroku run rake db:migrate</li>
+      <li>heroku run rake de:seed</li>
+    </ol>
   </body>
 </html>
