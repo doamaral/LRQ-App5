@@ -38,8 +38,18 @@
     </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
-  <div class="col-lg-10-offset-2">
-    <%= yield %>
+  <div class="row">
+    <div class="col-lg-10">
+      <%= yield %>
+    </div>
+    <div class="col-lg-2">
+      <ul class="nav nav-pills nav-stackes">
+        <li><%= link_to 'All categories', root_path%></li>
+        <% Category.all.each do |cat|%>
+          <li><%= link_to cat.name, article_path(category: cat.name) %></li>
+        <%end%>
+      </ul>
+    </div>
   </div>
 </div>
 
