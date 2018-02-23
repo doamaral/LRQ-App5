@@ -2,6 +2,8 @@
 
 * Bug fixed: https://www.pixelstech.net/article/1476434897-Resolve-stylesheet_link_tag-fails-to-work-in-Ruby-on-Rails
 
+* on heroku: https://easywikimanerin.herokuapp.com
+
 How to create a static page (about)
 
     rails g generate about
