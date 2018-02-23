@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Static page</title>
+  </head>
+  <body>
+    <h1>About</h1>
+    <h2>How to create a static page (about)</h2>
+    <ol>
+      <li>rails g generate about</li>
+      <li>create index method inside the above created controller</li>
+      <li>Adjust the routes file
+        <ul>
+          <li>get '/about' => 'about#index'</li>
+        </ul>
+      </li>
+    </ol>
+    <h2>Active Admin Gem</h2>
+    <ol>
+      <li>gem 'activeadmin'</li>
+      <li>rails g active_admin:install</li>
+      <li>Define Admin into db/seeds.rb</li>
+      <li>rake db:migrate db:seed</li>
+      <li>rails g active_admin:resource <i>model</i> to admin the model from the active admin panel</li>
+    </ol>
+  </body>
+</html>
