@@ -22,17 +22,18 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = Article.new
+    load_options_for_select
   end
 
   # GET /articles/1/edit
   def edit
+    load_options_for_select
   end
 
   # POST /articles
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
@@ -77,5 +78,8 @@ class ArticlesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article).permit(:title, :body, :image_url, :category_id)
+    end
+    def load_options_for_select
+      @list_all_categories = Category.all
     end
 end
